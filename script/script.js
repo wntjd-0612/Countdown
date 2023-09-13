@@ -28,7 +28,7 @@ function startCountdown() {
             const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
             const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
 
-            document.getElementById("countdown").innerHTML = `${days}일 ${hours}시간 ${minutes}분 ${seconds}초 남았습니다.`;
+            document.getElementById("countdown").innerHTML = `${days}일 ${hours}시간 ${minutes}분 ${seconds}초`;
         }
     }, 1000);
 }
