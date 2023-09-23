@@ -1,16 +1,42 @@
 /* style.css */
 
 body {
+    text-decoration: none;
     font-family: Arial, sans-serif;
     background-color: #f2f2f2;
     margin: 0;
     padding: 0;
     text-align: center;
 }
+#nav {
+    background-color: #007BFF;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    height: 40px;
+}
+a{
+    text-decoration: none;
+}
+
+#nav h1 {
+    margin: 0;
+    color: #fff;
+    justify-content: center;
+}
+#nav img{
+    width: 36px;
+    position: absolute;
+    right: 2%;
+    top: 10px;
+}
 
 
 #main{
+    width: 100%;
+    height: 100%;
     justify-content: center;
+    align-content: center;
 }
 
 h1 {

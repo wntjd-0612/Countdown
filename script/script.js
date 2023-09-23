@@ -28,15 +28,18 @@ function startCountdown() {
             const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
             const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
 
-            document.getElementById("countdown").innerHTML = `${days}일 ${hours}시간 ${minutes}분 ${seconds}초`;
+            // 시간과 날짜를 디지털 시계 형식으로 포맷팅
+            const digitalClock = `${days}일 ${formatTime(hours)}:${formatTime(minutes)}:${formatTime(seconds)}`;
+            document.getElementById("countdown").innerHTML = digitalClock;
         }
     }, 1000);
 }
 
-function stopCountdown() {
-    clearInterval(countdownInterval);
-    document.getElementById("countdown").innerHTML = "타이머 중지!";
+// 시간 구성 요소 (시간, 분, 초)를 두 자릿수로 포맷팅하는 도우미 함수
+function formatTime(time) {
+    return time < 10 ? `0${time}` : time;
 }
+
 
 function sendPushNotification() {
     if ('serviceWorker' in navigator && 'PushManager' in window) {
